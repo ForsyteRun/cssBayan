@@ -1,0 +1,43 @@
+/* ---------------------main------------------ */
+body {
+  background: #eeeec97b;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.wrapper{
+  max-width: 1960px;
+  /* max */
+  height: 1160px; 
+  margin: 0 auto;
+  padding: 40px 20px;
+  /* not */
+  /* background: #7f7f80; */
+}
+
+.accordion__img {
+  display: none;
+}
+
+.accordion__block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #999;
+  cursor: pointer;
+}
+
+.accordion__title{
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: rgba(27, 27, 168, 0.919);
+}
+
+.fa-solid{
+  font-size: 2rem;
+}
