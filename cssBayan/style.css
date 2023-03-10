@@ -67,3 +67,13 @@ h1 {
   visibility: visible;
   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+.visiblImg{
+  height: 30rem !important; 
+  width: 50% !important;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.colorTitleClick {
+  color: #000 !important;
+}

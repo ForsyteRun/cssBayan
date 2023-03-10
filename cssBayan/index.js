@@ -19,8 +19,8 @@ accordionBlock.forEach((block) => {
 
     //appear img
     const img = block.querySelector('.accordion__img img')
-    img.style.cssText = "height: 30rem; width: 60% width: 80%; transition: all 0.4s ease"
-
+    img.style.cssText = "height: 30rem; width: 50%; transition: all 0.4s ease"
+    
   })
   block.addEventListener('mouseleave', () => {
 
@@ -41,4 +41,17 @@ accordionBlock.forEach((block) => {
     const img = block.querySelector('.accordion__img img')
     img.style.cssText = "height: 0; width: 0; transition: all 0.7s ease-in-out;"
   })
+})
+
+
+document.addEventListener('click', (event) => {
+  const visibleImg = document.querySelector('.visiblImg')
+
+  //set stable choose img
+  const block =  event.target.closest('.accordion__block')
+  const img = block.querySelector('.accordion__img img')
+
+  //find all another img & set it unVisible
+  img && img.classList.toggle('visiblImg')
+  visibleImg !== img && visibleImg && visibleImg.classList.remove('visiblImg')
 })
