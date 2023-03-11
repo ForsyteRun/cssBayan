@@ -88,13 +88,13 @@ input:checked ~ i{
   transition: color 0.1s ease-in-out;
 }
 
-input:checked ~ div{
+input:checked ~ span{
   color: #000;
   transition: color 0.1s ease-in-out;
 }
 
 /* ----------------close/open img------------------ */
-label:active div{
+label:active span{
   color: rgb(110, 95, 230);
 }
 
