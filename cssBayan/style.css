@@ -6,17 +6,17 @@ body {
 h1 {
   font-size: 5rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 }
 
 /* -----------------accordion-------------------- */
 
 .wrapper{
-  max-width: 1960px;
+  width: 80vw;
   /* max */
-  height: 1160px; 
+  height: 80vh; 
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 3rem 1.5rem;
 }
 
 img{
@@ -32,11 +32,11 @@ label{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 30px;
+  row-gap: 4rem;
   color: rgb(110, 95, 230);
   font-size: 2.8rem;
   font-weight: bold;
-  border-top: 1px solid #999;
+  border-top: 0.1rem solid #999;
   padding: 2% 0;
   cursor: pointer;
 }
@@ -48,8 +48,7 @@ label >* {
 i {
   display: flex !important;
   justify-content: flex-end;
-  /* flex: none; */
-  font-size: 50px;
+  font-size: 4rem;
 }
 
 input{
@@ -71,7 +70,7 @@ input{
 
 .accordion__block:hover .fa-solid{
   flex: none;
-  width: 20px;
+  width: 1.5rem;
   transform: rotate(45deg);
 }
 
@@ -80,7 +79,7 @@ input{
 }
 
 input:checked ~ i{
-  transform: rotate(44deg) translate(-136px, -323px);
+  transform: rotate(44deg) translate(-8.5rem, -20.18rem);
 }
 
 .accordion:hover label{
