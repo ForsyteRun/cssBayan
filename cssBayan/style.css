@@ -19,101 +19,109 @@ h1 {
   padding: 40px 20px;
 }
 
+img{
+  flex: none !important;
+  width: 0;
+  height: 0;
+
+  transition: height 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+/* img, i{
+  flex: none !important;
+} */
+
+
 label{
   width: 100%;
-  height: 450px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+
+  font-size: 2.8rem;
+  font-weight: bold;
+  border-top: 1px solid #999;
+  padding: 2% 0;
   cursor: pointer;
+}
+
+label >* {
+  flex: 1 0 39%;
+}
+
+i {
+  display: flex !important;
+  justify-content: flex-end;
+  font-size: 50px;
 }
 
 input{
   width: 0;
   height: 0;
-  opacity: 0;
 }
 
-input:checked + label{
-  background: red;
-}
-
-.accordion__block{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-
-
-
-
-/* 
-.accordion__img {
-  display: none;
-}
-
-.accordion__block{
-  padding: 10px;
-  border-top: 1px solid #999;
-  cursor: pointer;
-}
-
-.accordion__block__top{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.accordion__title{
-  font-size: 2.7rem;
-  font-weight: 600;
-  color: #1b1ba8ea;
-}
-
-.accordion__img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
+/* remove icon hover */
 .fa-solid{
-  font-size: 3rem;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* ==================== */
-/* .accordion__img img {
-  height: 0;
-  transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-} */
-
-/* ---------------move del icon---------------- */
-/* .accordion__icon {
   visibility: hidden;
-  transition: visibility 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.1s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.accordion:hover .accordion__block__top .accordion__icon{
+.accordion:hover .accordion__block .fa-solid{
   visibility: visible;
-  transition: visibility 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
-.accordion__block:hover .accordion__block__top .accordion__icon .fa-solid{
+
+.accordion__block:hover .fa-solid{
+  /* transform: rotate(45deg);  */
+}
+
+.accordion:hover .fa-solid{
+  color: #000 !important;
+}
+
+.accordion:hover label{
+  color: rgb(110, 95, 230);
+  transition: color 0.1s ease-in-out;
+}
+
+
+
+
+/* input:hover ~ {
+  color: rgb(110, 95, 230);
+  transition: color 0.1s ease-in-out;
+}
+
+/* ----------------close/open img------------------ */
+input:hover ~ img{
+  flex: none;
+  width: 80%;
+  height: 55rem;
+  margin: 0 auto;
+  transition: height 0.4s ease-in-out;
+}
+
+input:checked ~ img{
+  flex: none;
+  width: 80%;
+  height: 55rem;
+  margin: 0 auto;
+  transition: height 0.4s ease-in-out;
+}
+
+/* input:checked ~ .accirdion__img img{
+  width: 68%;
+  height: 30rem;
+  transition: all 0.4s ease-in-out;
+} */
+
+/* input:checked ~ .accirdion__img {
+  margin-bottom: 20px;
+} */
+
+/* input:checked ~ i{
   transform: rotate(45deg);
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 } */
-
-/* ---------------change title color----------------- */
-/* .accordion__block:hover .accordion__block__top .accordion__title{
-  color: #000;
-  transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* ---------------appear img------------------------- */
-/* .accordion__block:hover .accordion__img img {
-  width: 60%;
-  height: 35rem;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-} */
-
-/* ----------------click img--------------------------- */
