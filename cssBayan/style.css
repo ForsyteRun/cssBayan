@@ -19,6 +19,33 @@ h1 {
   padding: 40px 20px;
 }
 
+label{
+  width: 100%;
+  height: 450px;
+  cursor: pointer;
+}
+
+input{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+input:checked + label{
+  background: red;
+}
+
+.accordion__block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+
+/* 
 .accordion__img {
   display: none;
 }
@@ -56,12 +83,13 @@ h1 {
 }
 
 /* ==================== */
-.accordion__img img {
+/* .accordion__img img {
   height: 0;
-}
+  transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+} */
 
 /* ---------------move del icon---------------- */
-.accordion__icon {
+/* .accordion__icon {
   visibility: hidden;
   transition: visibility 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -73,4 +101,19 @@ h1 {
 .accordion__block:hover .accordion__block__top .accordion__icon .fa-solid{
   transform: rotate(45deg);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+} */
+
+/* ---------------change title color----------------- */
+/* .accordion__block:hover .accordion__block__top .accordion__title{
+  color: #000;
+  transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+/* ---------------appear img------------------------- */
+/* .accordion__block:hover .accordion__img img {
+  width: 60%;
+  height: 35rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+} */
+
+/* ----------------click img--------------------------- */
