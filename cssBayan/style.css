@@ -1,0 +1,154 @@
+/* ---------------------main------------------ */
+body {
+  background: #bfe3ec7b;
+}
+
+h1 {
+  font-size: 4vw;
+  font-weight: 600;
+  color: #5625ccb8;
+  margin-bottom: 1.5vw;
+}
+
+/* -----------------accordion-------------------- */
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vw 7vw;
+}
+
+ input ~ .accordion__label img{
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  padding-bottom: 1%;
+  transition: all 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion__block{
+  width: 100%;
+  padding: 1% 0;
+  border-top: 0.1rem solid #999;
+}
+
+.accordion__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.accordion__label {
+  padding-bottom: 1%;
+}
+
+input{
+  display: inherit;
+  width: 0;
+  height: 0;
+}
+
+label {
+  color: rgb(110, 95, 230);
+  cursor: pointer;
+}
+
+label span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* remove icon hover */
+.fa-solid{
+  visibility: hidden;
+}
+
+.accordion:hover .accordion__block .fa-solid{
+  visibility: visible;
+  transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.accordion__block:hover .fa-solid{
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in;
+}
+
+.accordion__block:hover .fa-solid{
+  color: rgb(110, 95, 230);
+}
+
+.accordion:hover label{
+  color: #000;
+  transition: color 0.7s ease-in-out;
+}
+
+input:checked ~ label span{
+  color: #000;
+  transition: color 0.1s ease-in-out;
+}
+
+/* ----------------close/open img------------------ */
+.accordion__block:hover label img{
+  width: 100%;
+  height: 90%;
+  transition: all 1s ease-in-out;
+}
+
+.accordion__block:active label img{
+  opacity: 0.5;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.accordion__block:active label span{
+  color:rgb(110, 95, 230);
+}
+
+input:checked ~ .accordion__label img{
+  width: 100%;
+  height: 90%;
+  transition: height 1s ease-in-out;
+}
+
+input:checked ~ .accordion__label .fa-solid{
+  transform: rotate(45deg);
+  color: rgb(110, 95, 230);
+}
+
+/* ---------------media-------------------- */
+
+@media (hover: none) {
+  .accordion__block:hover label img{
+    transition: all 0.6s ease;
+  }
+
+  input:checked ~ .accordion__label .fa-solid{
+    visibility: visible !important;
+    color: rgb(110, 95, 230);
+  }
+
+  .accordion:hover .accordion__block .fa-solid{
+    visibility: hidden;
+  }
+}
+
+@media(min-width: 810px) and (max-width: 1900px){
+  label span {
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 310px) and (max-width: 810px){
+  label span {
+    font-size: 0.87rem;
+  }
+}
