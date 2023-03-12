@@ -75,7 +75,7 @@ label span {
 
 .accordion:hover .accordion__block .fa-solid{
   visibility: visible;
-  transition: visibility 0.1s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .accordion__block:hover .fa-solid{
@@ -107,6 +107,10 @@ input:checked ~ label span{
 .accordion__block:active label img{
   opacity: 0.5;
   transition: opacity 0.1s ease-in-out;
+}
+
+.accordion__block:active label span{
+  color:rgb(110, 95, 230);
 }
 
 input:checked ~ .accordion__label img{
