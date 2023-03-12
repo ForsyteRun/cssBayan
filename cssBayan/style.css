@@ -1,118 +1,111 @@
 /* ---------------------main------------------ */
 body {
-  background: #eeeec97b;
+  background: #bfe3ec7b;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4vw;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5vw;
 }
 
 /* -----------------accordion-------------------- */
 
 .wrapper{
-  width: 80vw;
-  /* max */
-  height: 80vh; 
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw 0.7vw;
 }
 
-img{
-  flex: none !important;
+ input ~ .accordion__label img{
   width: 0;
   height: 0;
-  transition: height 0.7s ease-in-out;
   cursor: pointer;
+  padding-bottom: 1%;
+  transition: all 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-label{
-  width: 100%;
+.accordion {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 4rem;
-  color: rgb(110, 95, 230);
-  font-size: 2.8rem;
-  font-weight: bold;
-  border-top: 0.1rem solid #999;
-  padding: 2% 0;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
 }
 
-label >* {
-  flex: 1 0 39%;
+.accordion__block{
+  width: 100%;
+  padding: 1% 0;
+  border-top: 0.1rem solid #999;
 }
 
-i {
-  display: flex !important;
-  justify-content: flex-end;
-  font-size: 4rem;
+.accordion__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.accordion__label {
+  padding-bottom: 1%;
 }
 
 input{
-  flex: none;
+  display: inherit;
   width: 0;
   height: 0;
+}
+
+label {
+  color: rgb(110, 95, 230);
+}
+
+label span {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* remove icon hover */
 .fa-solid{
   visibility: hidden;
-  font-size: 4rem;
 }
 
 .accordion:hover .accordion__block .fa-solid{
   visibility: visible;
-  transition: visibility 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .accordion__block:hover .fa-solid{
-  flex: none;
-  width: 1.5rem;
   transform: rotate(45deg);
+  transition: all 0.4s ease-in;
 }
 
-.accordion:hover .fa-solid{
-  color: #000 !important;
-}
-
-input:checked ~ i{
-  transform: rotate(44deg) translate(-8.5rem, -20.18rem);
+.accordion__block:hover .fa-solid{
+  color: rgb(110, 95, 230);
 }
 
 .accordion:hover label{
   color: #000;
-  transition: color 0.1s ease-in-out;
+  transition: color 0.7s ease-in-out;
 }
 
-input:checked ~ span{
+input:checked ~ label span{
   color: #000;
   transition: color 0.1s ease-in-out;
 }
 
 /* ----------------close/open img------------------ */
-label:active span{
-  color: rgb(110, 95, 230);
+.accordion__block:hover label img{
+  width: 100%;
+  height: 90%;
+  transition: all 1s ease-in-out;
 }
 
-label:active img{
-  opacity: 0.5;
+input:checked ~ .accordion__label img{
+  width: 100%;
+  height: 90%;
+  transition: height 1s ease-in-out;
 }
 
- input:hover ~ img{
-  flex: none;
-  width: 80%;
-  height: 55rem;
-  margin: 0 auto;
-  transition: height 0.4s ease-in-out;
-}
-
-input:checked ~ img{
-  flex: none;
-  width: 80%;
-  height: 55rem;
-  margin: 0 auto;
-  transition: height 0.4s ease-in-out;
-}
+/* ---------------media-------------------- */
