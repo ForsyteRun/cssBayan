@@ -116,8 +116,6 @@ input:checked ~ .accordion__label img{
 }
 
 input:checked ~ .accordion__label .fa-solid{
-  visibility: visible;
-
   transform: rotate(45deg);
   color: rgb(110, 95, 230);
 }
