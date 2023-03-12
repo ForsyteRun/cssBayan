@@ -143,12 +143,12 @@ input:checked ~ .accordion__label .fa-solid{
 
 @media(min-width: 810px) and (max-width: 1900px){
   label span {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 @media(min-width: 310px) and (max-width: 810px){
   label span {
-    font-size: 14px;
+    font-size: 0.87rem;
   }
 }
